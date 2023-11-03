@@ -19,16 +19,12 @@ body{
     color: white;
 }
 
-header {
+/* header {
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     height: 90px;
-}
-
-.container {
-    padding: 10px;
 }
 
 .header-container {
@@ -44,20 +40,33 @@ header {
     border-radius: 5px;
     margin-top: 5px;
     margin-right: 5px;
+} */
+
+header:first-child{
+    position: fixed;
+    top: 20px;
+    right: 10px;
+    z-index: 1;
+}
+
+header > div > span{
+    background-color: rgba(128, 128, 128, 0.726);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 5px;
 }
 
 .main-container{
-    width: 90vw;
+    width: calc(100vw - 20px);
+    height: calc(100vh - 100px);
     overflow:auto;
-    margin: 100px auto;
-    
-}
-
-.main-container{
+    margin: 100px auto;  
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-}
+}  
+
+    
 
 .main-container img {
     width: 100%;
@@ -82,13 +91,87 @@ header {
 
 }
 
-footer{
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 100px;
     width: 100vw;
-    background-color: grey;
+    background-color: rgb(53, 52, 52);
     position: fixed;
     bottom:0;
     right: 0;
     left: 0;
+    font-size: 25px;
+}
+
+.footer-container  div > i, .footer-container  div > p{
+    text-align: center;
+}
+
+.foot-col-1{
+    margin-left: 20px;
+}
+    
+.foot-col-2 > *{
+    padding: 0 15px;
+}
+
+.foot-col-3{
+    color: red;
+    background-color: darkgrey;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-right: 20px;
+}
+
+.fa-solid.fa-angle-up{
+    font-size: 12px;
+    padding-left: 5px;
+    padding-top:15px
 
 }
+
+.fa-solid.fa-share-from-square{
+    color: rgb(0, 255, 0);
+}
+
+
+
+/* i:not(.fa-angle-up),i:not(.fa-maximize), i:not(.fa-microphone-slash){
+    padding-left: 10px;
+} */
+
+.footer-container i > *{
+    font-size: 8px;
+    padding-top:5px;
+}
+
+/* .footer-col-1 > ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.footer-col-1 > ul > li> a{
+    padding: 0 10px;
+    text-align: center;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.footer-col-1 > ul > li{
+    padding-top: 16px;
+    text-align: center;
+}
+
+.footer-col-1 > ul > li > a > p{
+    font-size: 10px;
+    text-align: center;
+    padding-top: 5px;
+
+} */
+
+
